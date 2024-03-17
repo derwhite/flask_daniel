@@ -20,7 +20,7 @@ def get(id):
         if not "[" in v:
             ans += f"{i}.&nbsp;&nbsp;{v}<br>"
         elif "[" in v:
-            tmp = eval(v)
+            tmp = [x.strip() for x in v.strip()[1:-1].split(",")]
             ans += f"{i}. <br>"
             for j, w in enumerate(tmp, 0):
                 ans += f"&nbsp;&nbsp;{chr(j+ord('a'))})&nbsp;&nbsp;{w}<br>"
