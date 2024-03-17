@@ -13,7 +13,7 @@ def get(id):
         out = list_decode(id)
     except:
         return "error", 400
-    with open("flask_server/default.html", "r") as f:
+    with open("default.html", "r") as f:
         html_raw = f.read()
     ans = ""
     for i, v in enumerate(out, 1):
